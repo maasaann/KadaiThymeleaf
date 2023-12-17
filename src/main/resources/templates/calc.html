@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>KadaiThymeleaf</title>
+</head>
+<body>
+    <h1>三角形種別 判定ツール</h1>
+    <h2>それぞれの辺の長さを以下に入力して<br>「判定開始」ボタンを押してください</h2>
+    <form method="post" action="/calc">
+        １辺の長さ(cm):<input type="text" name="val_a"><br>
+        １辺の長さ(cm):<input type="text" name="val_b"><br>
+        １辺の長さ(cm):<input type="text" name="val_c"><br><br>
+        <button type="submit">判定開始</button>
+    </form>
+    <p th:text="'判定結果「' + ${res} + '」'"></p>
+    <p th:text="'入力した値「' + ${val_a} +'/'+ ${val_b} +'/'+ ${val_c} + '」'"></p>
+</body>
+</html>
